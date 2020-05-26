@@ -9,7 +9,9 @@
         The song name was [[${song.name}]].<br />
         The artist name is [[${song.artist}]].<br />
         The album name is [[${song.album}]].<br />
-        The rating was [[${song.rating}]] and the year was [[${song.year}]].
+        The genre name is [[${song.genre}]].<br />
+        The rating was [[${song.rating}]] and the year was [[${song.year}]]. <br />
+        The album is <span th:text="${song.inStock}? 'in stock.' : 'out of stock.'"></span>
     </p>
 </body>
 </html>
