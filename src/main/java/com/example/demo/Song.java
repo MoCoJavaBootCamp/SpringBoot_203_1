@@ -1,12 +1,20 @@
 package com.example.demo;
 
+import java.util.Random;
+
 public class Song {
     private long id;
     private String name;
     private String artist;
     private String album;
+    private String genre;
     private int rating;
     private int year;
+    private boolean inStock;
+
+    Song() {
+        setInStock();
+    }
 
     public long getId() {
         return id;
@@ -54,5 +62,22 @@ public class Song {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public boolean isInStock() {
+        return inStock;
+    }
+
+    public void setInStock() {
+        Random random = new Random();
+        this.inStock = random.nextBoolean();
     }
 }

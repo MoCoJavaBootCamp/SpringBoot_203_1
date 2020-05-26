@@ -9,8 +9,21 @@
         Name: <input type="text" th:field="*{name}" /><br />
         Artist: <input type="text" th:field="*{artist}" /><br />
         Album: <input type="text" th:field="*{album}" /><br />
-        Rating: <input type="text" th:field="*{rating}" /><br />
         Year: <input type="text" th:field="*{year}" /><br />
+        Rating: 1 - Worst
+            <input type="radio" value="1" th:field="*{rating}" />
+            <input type="radio" value="2" th:field="*{rating}" />
+            <input type="radio" value="3" th:field="*{rating}" />
+            <input type="radio" value="4" th:field="*{rating}" />
+            <input type="radio" value="5" th:field="*{rating}" /> 5 - Best<br />
+        Genre:
+            <select th:field="*{genre}">
+                <option th:value="jazz">Jazz</option>
+                <option th:value="pop">Pop</option>
+                <option th:value="rap">Rap</option>
+                <option th:value="rock">Rock</option>
+
+            </select><br />
         <input type="submit" value="Submit" />
     </form>
 </body>
